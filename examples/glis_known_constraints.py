@@ -12,8 +12,7 @@ Authors: A. Bemporad, M. Zhu
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-# from pyswarm import pso
-from src.glis.glis import GLIS
+from glis import GLIS
 
 benchmark = "camelsixhumps"
 

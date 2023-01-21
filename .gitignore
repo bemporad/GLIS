@@ -1,0 +1,11 @@
+
+dist/glis-2.0.0-py3-none-any.whl
+dist/glis-2.0.0.tar.gz
+src/glis.egg-info/dependency_links.txt
+src/glis.egg-info/PKG-INFO
+src/glis.egg-info/requires.txt
+src/glis.egg-info/SOURCES.txt
+src/glis.egg-info/top_level.txt
+src/glis/__pycache__/__init__.cpython-39.pyc
+src/glis/__pycache__/glis.cpython-39.pyc
+src/glis/__pycache__/rbf.cpython-39.pyc

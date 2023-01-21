@@ -21,7 +21,7 @@ Authors: A. Bemporad, M. Zhu
 import numpy as np
 import matplotlib.pyplot as plt
 from pyswarm import pso
-from src.glis.glis import GLISp
+from glis import GLISp
 
 benchmark = "camelsixhumps"
 # benchmark="ackley"

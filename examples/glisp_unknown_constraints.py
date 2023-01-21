@@ -10,8 +10,7 @@ Authors: A. Bemporad, M. Zhu
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-# from pyswarm import pso
-from src.glis.glis import GLISp
+from glis import GLISp
 from math import cos, sin, exp
 
 # benchmark="MBC"   # Mishra's Bird function constrained

@@ -122,7 +122,7 @@ Minimize a function $f$ of a vector $x\in\mathbb{R}^n$
 within the finite bounds *lb* $\leq x\leq$ *ub*:
 
 ~~~python
-from glis import GLIS
+from glis.solvers import GLIS
 prob = GLIS(bounds=(lb, ub), n_initial_random=10) # initialize GLIS object
 xopt, fopt = prob.solve(fun, max_evals)  # solve optimization problem
 ~~~
@@ -142,7 +142,7 @@ fopt = prob.fbest  # updated optimum
 Alternatively, for a full step-by-step optimization without explicitly passing the function handle `fun` to GLIS, use the following code structure to solve the problem step by step:
 
 ~~~python
-from glis import GLIS
+from glis.solvers import GLIS
 prob = GLIS(bounds=(lb, ub), n_initial_random=10)  # initialize GLIS object
 x = prob.initialize()  # get first sample to query
 for k in range(max_evals):
@@ -213,7 +213,7 @@ To solve a preference-based optimization problem with preference function $\pi(x
 within the finite bounds `lb` $\leq x\leq$ `ub` use the following code:
 
 ~~~python
-from glis import GLISp
+from glis.solvers import GLISp
 prob = GLISp(bounds=(lb, ub), n_initial_random=10)    # initialize GLISp object
 xopt = prob.solve(pref_fun, max_prefs)                # solve problem
 ~~~
@@ -233,7 +233,7 @@ xbest = prob.xbest        # updated optimizer
 Alternatively, for a full step-by-step optimization without explicitly passing the function handle `pref_fun` to GLISp, use the following code structure to solve the problem step by step:
 
 ~~~python
-from glis import GLISp
+from glis.solvers import GLISp
 prob = GLISp(bounds=(lb, ub), n_initial_random=10) # initialize GLISp object
 xbest, x = prob.initialize()  # get first two random samples
 for k in range(max_prefs):
@@ -296,7 +296,7 @@ $$rbf(x_1,x_2)=e^{-(\epsilon||x_1-x_2||_2)^2}$$
 use the following code:
 
 ~~~python
-from glis import gaussian
+from glis.rbf import gaussian
 prob = GLIS(bounds=(lb, ub), n_initial_random=10, rbf=gaussian, rbf_epsil=3.0)
 xopt, fopt = prob.solve(fun, max_evals)
 ~~~
@@ -304,7 +304,7 @@ xopt, fopt = prob.solve(fun, max_evals)
 The following RBFs are available in `glis`:
 
 ~~~python
-from glis import gaussian, inverse_quadratic, multiquadric, thin_plate_spline, linear, inverse_multi_quadric
+from glis.rbf import gaussian, inverse_quadratic, multiquadric, thin_plate_spline, linear, inverse_multi_quadric
 ~~~
 
 In alternative to RBF functions, in GLIS we can use inverse distance weighting (IDW) surrogates:

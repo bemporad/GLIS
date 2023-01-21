@@ -23,7 +23,7 @@ Authors: A. Bemporad, M. Zhu
 import numpy as np
 import matplotlib.pyplot as plt
 from pyswarm import pso
-from glis import GLIS
+from glis.solvers import GLIS
 
 benchmark = "camelsixhumps"
 # benchmark="ackley"
@@ -148,7 +148,7 @@ np.random.seed(key)  # reset seed
 ####################################################################################
 print("Solve global optimization problem using non-default Gaussian RBF function")
 # Solve global optimization problem using non-default Gaussian RBF function
-from src.glis.glis import gaussian
+from glis.rbf import gaussian
 
 prob5 = GLIS(bounds=(lb, ub), n_initial_random=10, rbf=gaussian, rbf_epsil=3.0)
 xopt5, fopt5 = prob5.solve(fun, max_evals)

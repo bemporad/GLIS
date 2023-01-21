@@ -11,7 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 # from pyswarm import pso
-from glis import GLIS
+from glis.solvers import GLIS
 from math import cos, sin, exp
 
 benchmark = "MBC"  # Mishra's Bird function constrained

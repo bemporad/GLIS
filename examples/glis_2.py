@@ -13,7 +13,7 @@ Authors: A. Bemporad, M. Zhu
 import numpy as np
 import matplotlib.pyplot as plt
 from pyswarm import pso
-from glis import GLIS
+from glis.solvers import GLIS
 
 benchmark = "hartman6"
 # benchmark="rosenbrock8"

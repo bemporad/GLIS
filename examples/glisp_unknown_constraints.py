@@ -10,8 +10,8 @@ Authors: A. Bemporad, M. Zhu
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-from glis import GLISp
-from math import cos, sin, exp
+from glis.solvers import GLISp
+from math import cos, sin, exp, sqrt
 
 # benchmark="MBC"   # Mishra's Bird function constrained
 # benchmark='CHC' #CamelSixHumps function with feasibility constraints
@@ -296,7 +296,6 @@ if benchmark == "MBC":
 
 elif benchmark == "CHC":
     import matplotlib.patches as mpatches
-    from math import sqrt
 
     th = np.arange(0, 2 * np.pi, .01)
     N = th.size
@@ -315,7 +314,6 @@ elif benchmark == "CHC":
 
 elif benchmark == "CHSC":
     import matplotlib.patches as mpatches
-    from math import sqrt
 
     th = np.arange(0, 2 * np.pi, .01)
     N = th.size

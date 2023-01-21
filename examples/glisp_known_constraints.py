@@ -13,7 +13,7 @@ Authors: A. Bemporad, M. Zhu
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-from glis import GLISp
+from glis.solvers import GLISp
 
 benchmark = "camelsixhumps"
 

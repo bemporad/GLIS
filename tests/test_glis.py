@@ -6,7 +6,7 @@
 
 import unittest
 import numpy as np
-from glis import GLIS
+from glis.solvers import GLIS, GLISp
 
 
 class Test_glis(unittest.TestCase):

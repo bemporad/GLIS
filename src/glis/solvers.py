@@ -58,33 +58,8 @@ from scipy.optimize import linprog
 from pyDOE import lhs
 import time
 from numba import njit
-from math import exp
 import warnings
-
-
-# RBFs (@njit's improvements do not seem significant here)
-def inverse_quadratic(x1, x2, epsil):
-    return 1. / (1. + epsil ** 2 * np.sum((x1 - x2) ** 2, axis=-1))
-
-
-def gaussian(x1, x2, epsil):
-    return np.exp(-epsil ** 2 * np.sum((x1 - x2) ** 2, axis=-1))
-
-
-def multiquadric(x1, x2, epsil):
-    return np.sqrt(1. + epsil ** 2 * np.sum((x1 - x2) ** 2, axis=-1))
-
-
-def thin_plate_spline(x1, x2, epsil):
-    return epsil ** 2 * np.sum((x1 - x2) ** 2, axis=-1) * np.log(epsil * np.sqrt(np.sum((x1 - x2) ** 2, axis=-1)))
-
-
-def linear(x1, x2, epsil):
-    return epsil * np.sqrt(np.sum((x1 - x2) ** 2, axis=-1))
-
-
-def inverse_multi_quadric(x1, x2, epsil):
-    return 1. / np.sqrt(1. + epsil ** 2 * np.sum((x1 - x2) ** 2, axis=-1))
+from glis.rbf import inverse_quadratic
 
 
 @njit
@@ -968,7 +943,7 @@ class GLISp(GLIS_base):
     rbf: function, optional
         RBF interpolant used to construct the surrogate. Default RBFs can be imported:
 
-        from glis import gaussian, inverse_quadratic, multiquadric, thin_plate_spline, linear, inverse_multi_quadric
+        from glis.rbf import gaussian, inverse_quadratic, multiquadric, thin_plate_spline, linear, inverse_multi_quadric
 
         For example, in case of Gaussian RBF the function is defined as
 

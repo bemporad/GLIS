@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glis"
+version = "2.0.0"
+authors = [
+  { name="Alberto Bemporad", email="alberto.bemporad@imtlucca.it" },
+  { name="Mengjia Zhu", email="mengjia.zhu@imtlucca.it" },
+]
+description = "GLIS - (GL)obal optimization by (I)nverse distance weighting and (S)urrogate radial basis functions"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = ["numpy","scipy","pyswarm","pydoe"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+keywords = ["global optimization", "preference-based optimization", "black-box optimization"]
+
+[project.urls]
+"Homepage" = "http://cse.lab.imtlucca.it/~bemporad/glis"

@@ -166,7 +166,6 @@ def pref_fun_smart(x1, x2):
 pref_fun_smart.X = list()  # initialize preference function
 pref_fun_smart.F = list()
 
-key = 2
 np.random.seed(key)
 ##########################################
 print("Solve the problem use an alternative synthetic pref fun.")

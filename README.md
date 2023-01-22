@@ -425,7 +425,9 @@ xopt, fopt = prob.solve(fun, max_evals)
 
 Compare the best objective values found $f(x)$ of the *camel-six-humps* function:
 
+<p align="center">
 <img src="http://cse.lab.imtlucca.it/~bemporad/glis/images/glis-2.png" alt="drawing" width=50%/>
+</p>
  
 <a name="options"><a>
 

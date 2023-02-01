@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "glis"
-version = "2.0.0"
+version = "2.0.1"
 authors = [
   { name="Alberto Bemporad", email="alberto.bemporad@imtlucca.it" },
   { name="Mengjia Zhu", email="mengjia.zhu@imtlucca.it" },

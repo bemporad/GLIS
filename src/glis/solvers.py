@@ -51,6 +51,7 @@ See more in the README.md file.
 """
 
 import numpy as np
+import math as mt
 from pyswarm import pso  # the "pyswarms" package could be used here too
 import contextlib
 import io
@@ -244,8 +245,8 @@ def facquisition_pref_prob_improvement(v, W, sepvalue):
     c0 = 1.0
     cm1 = 1.0
     c1 = 1.0
-    em1 = exp(-cm1 * lm1)
-    f = -em1 / (em1 + exp(-c0 * l0) + exp(-c1 * l1))
+    em1 = mt.exp(-cm1 * lm1)
+    f = -em1 / (em1 + mt.exp(-c0 * l0) + mt.exp(-c1 * l1))
 
     return f
 

@@ -1444,7 +1444,7 @@ class GLISp(GLIS_base):
             else:
                 delta_S = 0.
 
-            dF = self.Fmax - self.Fmin
+            # dF = self.Fmax - self.Fmin
 
             M = self.MM[self.itheta]  # current RBF matrix
 

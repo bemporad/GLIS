@@ -109,7 +109,7 @@ The algorithm is based on the following paper:
 pip install glis
 ~~~
 
-A MATLAB version of GLIS/GLISp is also available for download [here](http://cse.lab.imtlucca.it/~bemporad/glis).
+A MATLAB version of GLIS/GLISp is also available for download [here](https://github.com/bemporad/GLIS_MATLAB).
 
 
 <a name="basic-usage"></a>
